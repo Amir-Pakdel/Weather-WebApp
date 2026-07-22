@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    background-image: url("img/bg1.jpg");
+    min-height: 100vh;
+    overflow: auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+    direction: rtl;
+}
+
+.header h4 {
+    color: #2d3436;
+    font-weight: 800;
+    font-size: 2.2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #2d5016 0%, #8d6e63 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.app-main {
+    min-height: 10vh;
+    width: 30vw;
+    margin: 80px auto;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(45, 80, 22, 0.2), 0 8px 20px rgba(141, 110, 99, 0.15);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-main:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 70px rgba(45, 80, 22, 0.25), 0 10px 25px rgba(141, 110, 99, 0.2);
+}
+
+.app-main > * {
+    margin-bottom: 20px;
+}
+
+.input-box {
+    width: 100%;
+    background: linear-gradient(135deg, #f1f8e9 0%, #d7ccc8 100%);
+    color: #2d3436;
+    font-weight: 500;
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: 1.3rem;
+    border-radius: 12px;
+    padding: 14px 15px;
+    text-align: center;
+    outline: none;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.input-box:focus {
+    border-color: #4a7c2e;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(74, 124, 46, 0.15);
+}
+
+.input-box::placeholder {
+    color: #8d6e63;
+    font-size: 1.1rem;
+}
+
+.weather-body {
+    color: #fff;
+    padding: 25px;
+    line-height: 2.2rem;
+    border-radius: 15px;
+    display: none;
+    background: linear-gradient(135deg, #2d5016 0%, #5d4037 100%);
+    box-shadow: 0 10px 30px rgba(45, 80, 22, 0.3);
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.location-deatils {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.weather-status {
+    padding: 15px;
+}
+
+.temp {
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: 15px 0px;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.weather {
+    margin-top: 15px;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.min-max {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-top: 12px;
+    opacity: 0.9;
+}
+
+.day_details {
+    padding: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 15px;
+}
+
+.sun-detail,
+.basic {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+#weather-icon {
+    color: white;
+}
+
+@media screen and (max-width: 800px) {
+    .app-main {
+        width: 92%;
+        padding: 15px;
+        margin: 30px auto;
+    }
+    body {
+        min-height: 94vh;
+    }
+    .header h4 {
+        font-size: 1.6rem;
+    }
+    .temp {
+        font-size: 3.5rem;
+    }
+}
